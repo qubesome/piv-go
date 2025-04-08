@@ -20,7 +20,7 @@ jobs:
     - name: Install libpcsc
       run: sudo apt-get install -y libpcsclite-dev pcscd pcsc-tools
     - name: Test
-      run: "go test -C v2 ./..."
+      run: make test
 
   build-windows:
     name: Windows
@@ -35,6 +35,6 @@ jobs:
       with:
         go-version: stable
     - name: Test
-      run: "go build -C v2 ./..."
+      run: make test
       env:
         CGO_ENABLED: 0
