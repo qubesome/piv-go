@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go:build (!cgo || pcscgo) && (linux || freebsd)
 // +build !cgo pcscgo
 // +build linux freebsd
 
@@ -21,7 +22,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/go-piv/piv-go/piv/internal/pcsc"
+	"github.com/qubesome/piv-go/piv/internal/pcsc"
 )
 
 func scCheck(err error) error {
