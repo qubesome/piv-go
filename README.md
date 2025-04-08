@@ -1,15 +1,15 @@
-This is not an officially supported Google product
-
 # A Go YubiKey PIV implementation
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/go-piv/piv-go/v2/piv.svg)](https://pkg.go.dev/github.com/go-piv/piv-go/v2/piv)
+[![Go Reference](https://pkg.go.dev/badge/github.com/qubesome/piv-go/piv.svg)](https://pkg.go.dev/github.com/qubesome/piv-go/piv)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/qubesome/piv-go/badge)](https://scorecard.dev/viewer/?uri=github.com/qubesome/piv-go)
 
 YubiKeys implement the PIV specification for managing smart card certificates.
 This applet is a simpler alternative to GPG for managing asymmetric keys on a
 YubiKey.
 
-This package is an alternative to Paul Tagliamonte's [go-ykpiv](https://github.com/paultag/go-ykpiv),
-a wrapper for YubiKey's ykpiv.h C library. This package aims to provide:
+This package is a hard fork from [go-piv/piv-go], which was originally an
+alternative to Paul Tagliamonte's [go-ykpiv], a wrapper for YubiKey's ykpiv.h
+C library. This package aims to provide:
 
 * Better error messages
 * Idiomatic Go APIs
@@ -19,7 +19,7 @@ V2 of this package was released in 2024 to support newer kinds of management
 keys, and is now the default branch for new features. The import path is:
 
 ```
-import "github.com/go-piv/piv-go/v2/piv"
+import "github.com/qubesome/piv-go/piv"
 ```
 
 ## Examples
@@ -317,3 +317,4 @@ directly use browser U2F challenges for smart cards.
 
 [go-ykpiv]: https://github.com/paultag/go-ykpiv
 [openssh-u2f]: https://marc.info/?l=openssh-unix-dev&m=157259802529972&w=2
+[go-piv/piv-go]: https://github.com/go-piv/piv-go

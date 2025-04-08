@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//go:build darwin || linux || freebsd || openbsd
-// +build darwin linux freebsd openbsd
+//go:build cgo && !pcscgo && (darwin || linux || freebsd)
+// +build cgo
+// +build !pcscgo
+// +build darwin linux freebsd
 
 package piv
 
